@@ -1,8 +1,7 @@
 import Layout from '../components/layout';
-import Header from '../components/header';
 
 export default () => (
   <Layout>
-    <p>This is the about page</p>
+    <p>If I introduce my nephew (brother's son) to Star Wars and he grows up to like the Dark Side of the Force, am I a good Sith-appa?</p>
   </Layout>
 );
