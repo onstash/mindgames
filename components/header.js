@@ -9,6 +9,12 @@ const Header = () => (
         <Link href="/">
           <a style={linkStyle}>Home</a>
         </Link>
+        <Link href="/games">
+          <a style={linkStyle}>Games</a>
+        </Link>
+        <Link href="/top-games">
+          <a style={linkStyle}>Top Games</a>
+        </Link>
         <Link href="/about">
           <a style={linkStyle}>About</a>
         </Link>

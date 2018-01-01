@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
 import Layout from '../components/layout';
-import Header from '../components/header';
 
 const Index = () => (
   <Layout>
-    <p>Hello Next.js</p>
+    <p>She: Hello there!</p>
+    <p>Me: General Kenobi!</p>
   </Layout>
 );
 
