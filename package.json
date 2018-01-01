@@ -1,0 +1,9 @@
+{
+  "name": "mindgames",
+  "version": "1.0.0",
+  "description": "Mindgames is a demo site for a university project",
+  "main": "index.js",
+  "repository": "https://github.com/onstash/mindgames",
+  "author": "Santosh Venkatraman",
+  "license": "MIT"
+}
