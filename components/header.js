@@ -1,24 +1,39 @@
 import Link from 'next/link';
 
-const linkStyle = {
-  marginRight: 15
-};
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+    margin-left: -10px;
+`;
+
+const StyledLink = styled.a`
+    cursor: pointer;
+    padding: 10px;
+    color: #777;
+    transition: color 300ms ease-in-out;
+    &:hover {
+        color: #333;
+    }
+`;
 
 const Header = () => (
-    <div>
+    <StyledDiv>
         <Link href="/">
-          <a style={linkStyle}>Home</a>
+          <StyledLink>Home</StyledLink>
         </Link>
         <Link href="/games">
-          <a style={linkStyle}>Games</a>
+          <StyledLink>Games</StyledLink>
         </Link>
         <Link href="/top-games">
-          <a style={linkStyle}>Top Games</a>
+          <StyledLink>Top Games</StyledLink>
+        </Link>
+        <Link href="/upload-prescription">
+          <StyledLink>Upload prescription</StyledLink>
         </Link>
         <Link href="/about">
-          <a style={linkStyle}>About</a>
+          <StyledLink>About</StyledLink>
         </Link>
-    </div>
+    </StyledDiv>
 );
 
 export default Header;
