@@ -1,33 +1,23 @@
 import Header from './header';
+import ContentLayout from '../components/content-layout';
 
 import styled, { css } from 'styled-components';
-
-const sizes = {
-    desktop: 992,
-    tablet: 768,
-    phone: 376
-};
-// Iterate through the sizes and create a media template
-const media = Object.keys(sizes).reduce((acc, label) => {
-    acc[label] = (...args) => css`
-        @media (max-width: ${sizes[label] / 16}em) {
-            ${css(...args)}
-        }
-    `;
-    return acc
-}, {});
 
 const LayoutContainer = styled.div`
     border: 1px solid #EEE;
     padding: 20px;
     font-family: Roboto;
-    background-color: #c6d4df
+    background-color: #c6d4df;
+    display: flex;
+    flex-direction: column;
 `;
 
 const Layout = (props) => (
     <LayoutContainer>
         <Header />
-        {props.children}
+        <ContentLayout>
+            {props.children}
+        </ContentLayout>
     </LayoutContainer>
 );
 
