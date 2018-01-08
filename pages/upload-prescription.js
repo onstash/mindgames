@@ -6,14 +6,24 @@ import styled, { css } from 'styled-components';
 
 const Status = styled.div`
     margin-top: 10px;
-    color: #999;
+    padding: 10px;
+    border: 1px solid #333;
+    color: #666;
     font-weight: 400;
+    width: 250px;
+    text-align: center;
     ${props => props.uploading === true && css `
         color: orange;
+        border-color: orange;
     `}
     ${props => props.uploading === false && css `
         color: #38AC5F;
+        border-color: #38AC5F;
     `}
+`;
+
+const StyledInput = styled.input`
+    margin-top: 10px;
 `;
 
 class UploadPrescription extends React.Component {
@@ -36,10 +46,14 @@ class UploadPrescription extends React.Component {
         }
         return (
             <Layout>
-                <input type="file" onChange={() => this.onChange()} />
                 <Status uploading={uploading}>
                     {status}
                 </Status>
+                <StyledInput
+                    type="file"
+                    onChange={() => this.onChange()}
+                    className="inputfile"
+                />
             </Layout>
         );
     }
