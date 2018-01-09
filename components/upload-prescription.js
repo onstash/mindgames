@@ -4,13 +4,25 @@ import Layout from '../components/layout';
 
 import styled, { css } from 'styled-components';
 
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`;
+
+const PrescriptionText = styled.div`
+    margin-top: 0px;
+    font-size: 19px;
+    font-weight: bold;
+`;
+
 const Status = styled.div`
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 10px;
     border: 1px solid #333;
     color: #666;
-    font-weight: 400;
-    width: 250px;
+    font-weight: bold;
+    width: 350px;
     text-align: center;
     ${props => props.uploading === true && css `
         color: orange;
@@ -23,7 +35,7 @@ const Status = styled.div`
 `;
 
 const StyledInput = styled.input`
-    margin-top: 10px;
+    margin-top: 20px;
 `;
 
 class UploadPrescription extends React.Component {
@@ -42,19 +54,26 @@ class UploadPrescription extends React.Component {
         if (uploading === true) {
             status = "Uploading prescription...";
         } else if (uploading === false) {
-            status = "Uploaded prescription!";
+            status = "Thank you for uploading your prescription!";
         }
         return (
-            <Layout>
-                <Status uploading={uploading}>
-                    {status}
-                </Status>
+            <Container>
+                <PrescriptionText>
+                    Help us in helping you. Kindly upload your prescription so that we can suggest games for you.
+                </PrescriptionText>
                 <StyledInput
                     type="file"
                     onChange={() => this.onChange()}
                     className="inputfile"
                 />
-            </Layout>
+                {
+                    uploading === null ? null : (
+                        <Status uploading={uploading}>
+                            {status}
+                        </Status>
+                    )
+                }
+            </Container>
         );
     }
 }
