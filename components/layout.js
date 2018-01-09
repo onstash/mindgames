@@ -10,6 +10,7 @@ const LayoutContainer = styled.div`
     background-color: #c6d4df;
     display: flex;
     flex-direction: column;
+    padding-bottom: 30px;
 `;
 
 const Layout = (props) => (
