@@ -28,17 +28,10 @@ const AboutContent = styled.p`
     font-family: Roboto-Light;
 `;
 
-const ImportantContent = styled.p`
-    font-weight: bold;
-`;
-
 export default () => (
     <Layout>
         <AboutContainer>
             <AboutHeader>About us</AboutHeader>
-            <AboutContent>
-                Cerebro is a gaming platform that provide games which helps to boost the mental and cognitive ability of the patients suffering from Alzheimer, ADHD or other mental health issues. Our goal is to help patients recover from their neurological disorder in a non-invasive manner.
-            </AboutContent>
         </AboutContainer>
     </Layout>
 );
