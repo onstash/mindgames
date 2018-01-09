@@ -28,10 +28,24 @@ const AboutContent = styled.p`
     font-family: Roboto-Light;
 `;
 
+const List = styled.ul`
+    line-height: 1.9;
+    font-size: 17px;
+`;
+
 export default () => (
     <Layout>
         <AboutContainer>
             <AboutHeader>About us</AboutHeader>
+            <AboutContent>
+                The team is a bunch of smart and enthusiastic people -
+                <List>
+                    <li>Rajat Konner (Co-founder)</li>
+                    <li>Ashwath Narayan (Co-founder)</li>
+                    <li>Prashant Singh (Co-founder)</li>
+                    <li>Harold Finch (Web developer)</li>
+                </List>
+            </AboutContent>
         </AboutContainer>
     </Layout>
 );
