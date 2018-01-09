@@ -7,12 +7,14 @@ const StyledDiv = styled.div`
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #171a21;
+    background-color: #3b5999;
 `;
 
 const StyledLink = styled.a`
     cursor: pointer;
-    padding: 40px 30px;
+    margin-left: 20px;
+    padding: 50px 20px;
+    font-size: 18px;
     color: #CCC;
     transition: color 300ms ease-in-out;
     &:hover {
@@ -33,8 +35,8 @@ const LogoName = styled.div`
     text-align: center;
     font-weight: bold;
     font-size: 21.6px;
-    color: red;
     text-transform: uppercase;
+    color: white;
 `;
 
 const Header = () => (
