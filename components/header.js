@@ -7,30 +7,47 @@ const StyledDiv = styled.div`
     align-items: center;
     justify-content: center;
     padding: 30px 20px;
+    background-color: #171a21;
 `;
 
 const StyledLink = styled.a`
     cursor: pointer;
     padding: 40px 30px;
-    color: #666;
+    color: #CCC;
     transition: color 300ms ease-in-out;
     &:hover {
-        color: #333;
+        color: white;
     }
 `;
 
 const StyledImage = styled.img`
     width: 150px;
     height: 100px;
+`;
+
+const LogoContainer = styled.div`
     cursor: pointer;
+`;
+
+const LogoName = styled.div`
+    text-align: center;
+    font-weight: bold;
+    font-size: 21.6px;
+    color: red;
+    text-transform: uppercase;
 `;
 
 const Header = () => (
     <StyledDiv>
         <Link href="/">
-          <StyledImage
-            src="https://scontent.fblr2-1.fna.fbcdn.net/v/t34.0-12/26753764_1694452647260030_970383514_n.jpg?oh=826f496d67258b7c32c156f8b3a79741&oe=5A559180"
-          />
+          <LogoContainer>
+              <StyledImage
+                src="https://scontent.fblr2-1.fna.fbcdn.net/v/t34.0-12/26753764_1694452647260030_970383514_n.jpg?oh=826f496d67258b7c32c156f8b3a79741&oe=5A559180"
+              />
+              <LogoName>
+                Cerebro
+              </LogoName>
+          </LogoContainer>
         </Link>
         <Link href="/games">
           <StyledLink>Games</StyledLink>
