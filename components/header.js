@@ -57,9 +57,6 @@ const Header = () => (
         <Link href="/top-games">
           <StyledLink>Top Games</StyledLink>
         </Link>
-        <Link href="/upload-prescription">
-          <StyledLink>Upload prescription</StyledLink>
-        </Link>
         <Link href="/about">
           <StyledLink>About</StyledLink>
         </Link>

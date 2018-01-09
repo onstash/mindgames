@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import Layout from '../components/layout';
-import UploadPrescription from './upload-prescription';
+import UploadPrescription from '../components/upload-prescription';
 
 const Container = styled.div`
     display: flex;
